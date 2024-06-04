@@ -11,6 +11,13 @@
 		771172F22C0F525E00C6B3AA /* SepetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771172F12C0F525E00C6B3AA /* SepetVC.swift */; };
 		771172F42C0F528C00C6B3AA /* YemekHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771172F32C0F528C00C6B3AA /* YemekHucre.swift */; };
 		771172F62C0F52A200C6B3AA /* SepetHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771172F52C0F52A200C6B3AA /* SepetHucre.swift */; };
+		771172F82C0F583700C6B3AA /* Yemek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771172F72C0F583700C6B3AA /* Yemek.swift */; };
+		771172FA2C0F58B200C6B3AA /* YemeklerJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771172F92C0F58B200C6B3AA /* YemeklerJSON.swift */; };
+		771172FC2C0F58F400C6B3AA /* YemeklerDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771172FB2C0F58F400C6B3AA /* YemeklerDaoRepository.swift */; };
+		7711730B2C0F5A2A00C6B3AA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7711730A2C0F5A2A00C6B3AA /* RxSwift */; };
+		7711730E2C0F5AA400C6B3AA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7711730D2C0F5AA400C6B3AA /* Alamofire */; };
+		771173102C0F5B6A00C6B3AA /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7711730F2C0F5B6A00C6B3AA /* AnasayfaViewModel.swift */; };
+		771173132C0F5C7E00C6B3AA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 771173122C0F5C7E00C6B3AA /* Kingfisher */; };
 		77A14C192C0F3EC8008E9885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C182C0F3EC8008E9885 /* AppDelegate.swift */; };
 		77A14C1B2C0F3EC8008E9885 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C1A2C0F3EC8008E9885 /* SceneDelegate.swift */; };
 		77A14C1D2C0F3EC8008E9885 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C1C2C0F3EC8008E9885 /* Anasayfa.swift */; };
@@ -25,6 +32,10 @@
 		771172F12C0F525E00C6B3AA /* SepetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetVC.swift; sourceTree = "<group>"; };
 		771172F32C0F528C00C6B3AA /* YemekHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemekHucre.swift; sourceTree = "<group>"; };
 		771172F52C0F52A200C6B3AA /* SepetHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetHucre.swift; sourceTree = "<group>"; };
+		771172F72C0F583700C6B3AA /* Yemek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yemek.swift; sourceTree = "<group>"; };
+		771172F92C0F58B200C6B3AA /* YemeklerJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerJSON.swift; sourceTree = "<group>"; };
+		771172FB2C0F58F400C6B3AA /* YemeklerDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerDaoRepository.swift; sourceTree = "<group>"; };
+		7711730F2C0F5B6A00C6B3AA /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
 		77A14C152C0F3EC8008E9885 /* YemekSiparisUygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YemekSiparisUygulamasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A14C182C0F3EC8008E9885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A14C1A2C0F3EC8008E9885 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				771173132C0F5C7E00C6B3AA /* Kingfisher in Frameworks */,
+				7711730B2C0F5A2A00C6B3AA /* RxSwift in Frameworks */,
+				7711730E2C0F5AA400C6B3AA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,10 +83,14 @@
 				77A14C182C0F3EC8008E9885 /* AppDelegate.swift */,
 				77A14C1A2C0F3EC8008E9885 /* SceneDelegate.swift */,
 				77A14C1C2C0F3EC8008E9885 /* Anasayfa.swift */,
+				7711730F2C0F5B6A00C6B3AA /* AnasayfaViewModel.swift */,
 				771172EF2C0F525000C6B3AA /* UrunDetayVC.swift */,
 				771172F12C0F525E00C6B3AA /* SepetVC.swift */,
 				771172F32C0F528C00C6B3AA /* YemekHucre.swift */,
 				771172F52C0F52A200C6B3AA /* SepetHucre.swift */,
+				771172F72C0F583700C6B3AA /* Yemek.swift */,
+				771172F92C0F58B200C6B3AA /* YemeklerJSON.swift */,
+				771172FB2C0F58F400C6B3AA /* YemeklerDaoRepository.swift */,
 				77A14C1E2C0F3EC8008E9885 /* Main.storyboard */,
 				77A14C242C0F3EC9008E9885 /* Assets.xcassets */,
 				77A14C262C0F3EC9008E9885 /* LaunchScreen.storyboard */,
@@ -98,6 +116,11 @@
 			dependencies = (
 			);
 			name = YemekSiparisUygulamasi;
+			packageProductDependencies = (
+				7711730A2C0F5A2A00C6B3AA /* RxSwift */,
+				7711730D2C0F5AA400C6B3AA /* Alamofire */,
+				771173122C0F5C7E00C6B3AA /* Kingfisher */,
+			);
 			productName = YemekSiparisUygulamasi;
 			productReference = 77A14C152C0F3EC8008E9885 /* YemekSiparisUygulamasi.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +149,11 @@
 				Base,
 			);
 			mainGroup = 77A14C0C2C0F3EC8008E9885;
+			packageReferences = (
+				771172FD2C0F5A2A00C6B3AA /* XCRemoteSwiftPackageReference "RxSwift" */,
+				7711730C2C0F5AA400C6B3AA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				771173112C0F5C7E00C6B3AA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 77A14C162C0F3EC8008E9885 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,10 +183,14 @@
 			files = (
 				77A14C1D2C0F3EC8008E9885 /* Anasayfa.swift in Sources */,
 				77A14C192C0F3EC8008E9885 /* AppDelegate.swift in Sources */,
+				771173102C0F5B6A00C6B3AA /* AnasayfaViewModel.swift in Sources */,
 				771172F22C0F525E00C6B3AA /* SepetVC.swift in Sources */,
 				771172F62C0F52A200C6B3AA /* SepetHucre.swift in Sources */,
+				771172F82C0F583700C6B3AA /* Yemek.swift in Sources */,
+				771172FC2C0F58F400C6B3AA /* YemeklerDaoRepository.swift in Sources */,
 				77A14C232C0F3EC8008E9885 /* YemekSiparisUygulamasi.xcdatamodeld in Sources */,
 				771172F02C0F525000C6B3AA /* UrunDetayVC.swift in Sources */,
+				771172FA2C0F58B200C6B3AA /* YemeklerJSON.swift in Sources */,
 				771172F42C0F528C00C6B3AA /* YemekHucre.swift in Sources */,
 				77A14C1B2C0F3EC8008E9885 /* SceneDelegate.swift in Sources */,
 			);
@@ -383,6 +415,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		771172FD2C0F5A2A00C6B3AA /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+		7711730C2C0F5AA400C6B3AA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		771173112C0F5C7E00C6B3AA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7711730A2C0F5A2A00C6B3AA /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 771172FD2C0F5A2A00C6B3AA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		7711730D2C0F5AA400C6B3AA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7711730C2C0F5AA400C6B3AA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		771173122C0F5C7E00C6B3AA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 771173112C0F5C7E00C6B3AA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		77A14C212C0F3EC8008E9885 /* YemekSiparisUygulamasi.xcdatamodeld */ = {

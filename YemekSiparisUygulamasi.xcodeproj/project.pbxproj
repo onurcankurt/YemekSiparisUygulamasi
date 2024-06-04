@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771172F02C0F525000C6B3AA /* UrunDetayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771172EF2C0F525000C6B3AA /* UrunDetayVC.swift */; };
+		771172F22C0F525E00C6B3AA /* SepetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771172F12C0F525E00C6B3AA /* SepetVC.swift */; };
+		771172F42C0F528C00C6B3AA /* YemekHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771172F32C0F528C00C6B3AA /* YemekHucre.swift */; };
+		771172F62C0F52A200C6B3AA /* SepetHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771172F52C0F52A200C6B3AA /* SepetHucre.swift */; };
 		77A14C192C0F3EC8008E9885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C182C0F3EC8008E9885 /* AppDelegate.swift */; };
 		77A14C1B2C0F3EC8008E9885 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C1A2C0F3EC8008E9885 /* SceneDelegate.swift */; };
-		77A14C1D2C0F3EC8008E9885 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C1C2C0F3EC8008E9885 /* ViewController.swift */; };
+		77A14C1D2C0F3EC8008E9885 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C1C2C0F3EC8008E9885 /* Anasayfa.swift */; };
 		77A14C202C0F3EC8008E9885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A14C1E2C0F3EC8008E9885 /* Main.storyboard */; };
 		77A14C232C0F3EC8008E9885 /* YemekSiparisUygulamasi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C212C0F3EC8008E9885 /* YemekSiparisUygulamasi.xcdatamodeld */; };
 		77A14C252C0F3EC9008E9885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A14C242C0F3EC9008E9885 /* Assets.xcassets */; };
@@ -17,10 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		771172EF2C0F525000C6B3AA /* UrunDetayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunDetayVC.swift; sourceTree = "<group>"; };
+		771172F12C0F525E00C6B3AA /* SepetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetVC.swift; sourceTree = "<group>"; };
+		771172F32C0F528C00C6B3AA /* YemekHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemekHucre.swift; sourceTree = "<group>"; };
+		771172F52C0F52A200C6B3AA /* SepetHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetHucre.swift; sourceTree = "<group>"; };
 		77A14C152C0F3EC8008E9885 /* YemekSiparisUygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YemekSiparisUygulamasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A14C182C0F3EC8008E9885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A14C1A2C0F3EC8008E9885 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		77A14C1C2C0F3EC8008E9885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		77A14C1C2C0F3EC8008E9885 /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
 		77A14C1F2C0F3EC8008E9885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77A14C222C0F3EC8008E9885 /* YemekSiparisUygulamasi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YemekSiparisUygulamasi.xcdatamodel; sourceTree = "<group>"; };
 		77A14C242C0F3EC9008E9885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +68,11 @@
 			children = (
 				77A14C182C0F3EC8008E9885 /* AppDelegate.swift */,
 				77A14C1A2C0F3EC8008E9885 /* SceneDelegate.swift */,
-				77A14C1C2C0F3EC8008E9885 /* ViewController.swift */,
+				77A14C1C2C0F3EC8008E9885 /* Anasayfa.swift */,
+				771172EF2C0F525000C6B3AA /* UrunDetayVC.swift */,
+				771172F12C0F525E00C6B3AA /* SepetVC.swift */,
+				771172F32C0F528C00C6B3AA /* YemekHucre.swift */,
+				771172F52C0F52A200C6B3AA /* SepetHucre.swift */,
 				77A14C1E2C0F3EC8008E9885 /* Main.storyboard */,
 				77A14C242C0F3EC9008E9885 /* Assets.xcassets */,
 				77A14C262C0F3EC9008E9885 /* LaunchScreen.storyboard */,
@@ -141,9 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77A14C1D2C0F3EC8008E9885 /* ViewController.swift in Sources */,
+				77A14C1D2C0F3EC8008E9885 /* Anasayfa.swift in Sources */,
 				77A14C192C0F3EC8008E9885 /* AppDelegate.swift in Sources */,
+				771172F22C0F525E00C6B3AA /* SepetVC.swift in Sources */,
+				771172F62C0F52A200C6B3AA /* SepetHucre.swift in Sources */,
 				77A14C232C0F3EC8008E9885 /* YemekSiparisUygulamasi.xcdatamodeld in Sources */,
+				771172F02C0F525000C6B3AA /* UrunDetayVC.swift in Sources */,
+				771172F42C0F528C00C6B3AA /* YemekHucre.swift in Sources */,
 				77A14C1B2C0F3EC8008E9885 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

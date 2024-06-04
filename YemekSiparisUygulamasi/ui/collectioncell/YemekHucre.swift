@@ -17,6 +17,7 @@ class YemekHucre: UICollectionViewCell {
     @IBOutlet weak var yemekImageView: UIImageView!
     @IBOutlet weak var yemekAdLabel: UILabel!
     @IBOutlet weak var yemekFiyatLabel: UILabel!
+    @IBOutlet weak var favButton: UIButton!
     
     var indexPath: IndexPath?
     var yemekHucreProtocol: YemekHucreProtocol?
@@ -27,6 +28,6 @@ class YemekHucre: UICollectionViewCell {
     
     @IBAction func favorilereEkleButton(_ sender: Any) {
         yemekHucreProtocol?.favorilereEkle(indexPath: indexPath!)
+        favButton.imageView!.image = UIImage(named: "heart.fill")
     }
-    
 }

@@ -111,6 +111,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="favButton" destination="2OW-PR-YAr" id="qE4-4e-xBy"/>
                                             <outlet property="yemekAdLabel" destination="UWh-sZ-45Y" id="7Hc-gh-7du"/>
                                             <outlet property="yemekFiyatLabel" destination="bza-88-VG1" id="9XV-W4-Bxy"/>
                                             <outlet property="yemekImageView" destination="kZ8-Ih-lXx" id="ATh-yD-kjK"/>
@@ -151,80 +152,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vk9-n2-jFQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vk9-n2-jFQ">
                                 <rect key="frame" x="34" y="133" width="346" height="355"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="346" id="Liq-pC-ewo"/>
+                                    <constraint firstAttribute="height" constant="355" id="rNd-a0-v2l"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="₺ 55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35U-4x-xLY">
-                                <rect key="frame" x="177" y="513" width="60.5" height="33.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₺ 55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35U-4x-xLY">
+                                <rect key="frame" x="161" y="513" width="92" height="51.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="43"/>
                                 <color key="textColor" systemColor="systemTealColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Izgara Somon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETZ-c3-RMz">
-                                <rect key="frame" x="117.5" y="561.5" width="179" height="33.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Somon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETZ-c3-RMz">
+                                <rect key="frame" x="117.5" y="579.5" width="179" height="33.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl2-H5-JvG">
-                                <rect key="frame" x="145.5" y="616" width="34" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl2-H5-JvG">
+                                <rect key="frame" x="133" y="634" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="48c-Yt-4OJ"/>
+                                    <constraint firstAttribute="width" constant="34" id="Ezt-ic-jYo"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="minus" catalog="system"/>
                                 <connections>
                                     <action selector="yemekAzaltButton:" destination="BOt-bV-vZY" eventType="touchUpInside" id="nOs-wq-S1K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj1-H9-yHF">
-                                <rect key="frame" x="234.5" y="616" width="34" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MC0-2b-bfw">
+                                <rect key="frame" x="200.5" y="638" width="13.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₺ 110" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIR-o2-5Rb">
+                                <rect key="frame" x="34" y="773" width="74.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Kpn-8L-3Zk">
+                                <rect key="frame" x="14.5" y="718" width="385" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  25-35 dk  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJB-qw-Pku">
+                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="a6S-oK-wOj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Ücretsiz Teslimat  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-tg-0T2">
+                                        <rect key="frame" x="109.5" y="0.0" width="148" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  İndirim %10  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbb-x9-qB2">
+                                        <rect key="frame" x="278.5" y="0.0" width="106.5" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj1-H9-yHF">
+                                <rect key="frame" x="247" y="634" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="orW-Cb-14b"/>
+                                    <constraint firstAttribute="height" constant="34" id="zxv-5U-pND"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system"/>
                                 <connections>
                                     <action selector="yemekEkleButton:" destination="BOt-bV-vZY" eventType="touchUpInside" id="CEt-Ep-cNX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MC0-2b-bfw">
-                                <rect key="frame" x="200.5" y="620" width="13" height="26.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25-35 dk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJB-qw-Pku">
-                                <rect key="frame" x="34" y="708" width="71" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ücretsiz Teslimat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-tg-0T2">
-                                <rect key="frame" x="137" y="708" width="131" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="İndirim %10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbb-x9-qB2">
-                                <rect key="frame" x="305" y="708" width="89" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="₺ 110" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIR-o2-5Rb">
-                                <rect key="frame" x="34" y="773" width="75" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hu-3a-c3w">
-                                <rect key="frame" x="234" y="770" width="146" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hu-3a-c3w">
+                                <rect key="frame" x="248" y="770" width="146" height="43"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sepete Ekle">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
@@ -236,6 +267,26 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vld-eo-eXx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qIR-o2-5Rb" firstAttribute="leading" secondItem="Vld-eo-eXx" secondAttribute="leading" constant="34" id="3Ao-8h-81V"/>
+                            <constraint firstItem="MC0-2b-bfw" firstAttribute="centerX" secondItem="xsZ-nZ-NOA" secondAttribute="centerX" id="41n-VL-3z5"/>
+                            <constraint firstItem="gl2-H5-JvG" firstAttribute="top" secondItem="ETZ-c3-RMz" secondAttribute="bottom" constant="21" id="7kU-Tl-IPp"/>
+                            <constraint firstItem="Vld-eo-eXx" firstAttribute="trailing" secondItem="3Hu-3a-c3w" secondAttribute="trailing" constant="20" id="83W-XU-btn"/>
+                            <constraint firstItem="Aj1-H9-yHF" firstAttribute="top" secondItem="ETZ-c3-RMz" secondAttribute="bottom" constant="21" id="Hux-bF-Nfm"/>
+                            <constraint firstItem="Vld-eo-eXx" firstAttribute="bottom" secondItem="qIR-o2-5Rb" secondAttribute="bottom" constant="4" id="K2M-WB-FmP"/>
+                            <constraint firstItem="3Hu-3a-c3w" firstAttribute="bottom" secondItem="Vld-eo-eXx" secondAttribute="bottom" id="U5T-7a-cc9"/>
+                            <constraint firstItem="Kpn-8L-3Zk" firstAttribute="top" secondItem="gl2-H5-JvG" secondAttribute="bottom" constant="50" id="UeD-bA-3Wf"/>
+                            <constraint firstItem="35U-4x-xLY" firstAttribute="centerX" secondItem="xsZ-nZ-NOA" secondAttribute="centerX" id="azR-9M-rOc"/>
+                            <constraint firstItem="Vk9-n2-jFQ" firstAttribute="centerX" secondItem="xsZ-nZ-NOA" secondAttribute="centerX" id="bM5-ml-BIS"/>
+                            <constraint firstItem="Vk9-n2-jFQ" firstAttribute="top" secondItem="Vld-eo-eXx" secondAttribute="top" constant="41" id="dgN-xb-aLS"/>
+                            <constraint firstItem="35U-4x-xLY" firstAttribute="top" secondItem="Vk9-n2-jFQ" secondAttribute="bottom" constant="25" id="fbp-dL-c77"/>
+                            <constraint firstItem="Vld-eo-eXx" firstAttribute="trailing" secondItem="Aj1-H9-yHF" secondAttribute="trailing" constant="133" id="gvS-Ls-Hqm"/>
+                            <constraint firstItem="gl2-H5-JvG" firstAttribute="leading" secondItem="Vld-eo-eXx" secondAttribute="leading" constant="133" id="hg2-av-ASx"/>
+                            <constraint firstItem="Kpn-8L-3Zk" firstAttribute="centerX" secondItem="xsZ-nZ-NOA" secondAttribute="centerX" id="j3o-9K-oRe"/>
+                            <constraint firstItem="ETZ-c3-RMz" firstAttribute="centerX" secondItem="xsZ-nZ-NOA" secondAttribute="centerX" id="mXh-vN-6Um"/>
+                            <constraint firstItem="MC0-2b-bfw" firstAttribute="top" secondItem="ETZ-c3-RMz" secondAttribute="bottom" constant="25" id="uw7-My-Mkj"/>
+                            <constraint firstItem="ETZ-c3-RMz" firstAttribute="top" secondItem="35U-4x-xLY" secondAttribute="bottom" constant="15" id="xvC-m3-AOX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ürün Detayı" id="X1K-bm-vCS"/>
                     <connections>

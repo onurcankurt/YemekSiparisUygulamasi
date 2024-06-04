@@ -18,6 +18,10 @@
 		7711730E2C0F5AA400C6B3AA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7711730D2C0F5AA400C6B3AA /* Alamofire */; };
 		771173102C0F5B6A00C6B3AA /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7711730F2C0F5B6A00C6B3AA /* AnasayfaViewModel.swift */; };
 		771173132C0F5C7E00C6B3AA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 771173122C0F5C7E00C6B3AA /* Kingfisher */; };
+		771173152C0F852A00C6B3AA /* SepetJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771173142C0F852A00C6B3AA /* SepetJSON.swift */; };
+		771173172C0F89C400C6B3AA /* SepetYemek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771173162C0F89C400C6B3AA /* SepetYemek.swift */; };
+		771173192C0F8A6500C6B3AA /* SepetYemeklerJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771173182C0F8A6500C6B3AA /* SepetYemeklerJSON.swift */; };
+		771173232C0F8CF900C6B3AA /* SepetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771173222C0F8CF900C6B3AA /* SepetViewModel.swift */; };
 		77A14C192C0F3EC8008E9885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C182C0F3EC8008E9885 /* AppDelegate.swift */; };
 		77A14C1B2C0F3EC8008E9885 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C1A2C0F3EC8008E9885 /* SceneDelegate.swift */; };
 		77A14C1D2C0F3EC8008E9885 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A14C1C2C0F3EC8008E9885 /* Anasayfa.swift */; };
@@ -36,6 +40,10 @@
 		771172F92C0F58B200C6B3AA /* YemeklerJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerJSON.swift; sourceTree = "<group>"; };
 		771172FB2C0F58F400C6B3AA /* YemeklerDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerDaoRepository.swift; sourceTree = "<group>"; };
 		7711730F2C0F5B6A00C6B3AA /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
+		771173142C0F852A00C6B3AA /* SepetJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetJSON.swift; sourceTree = "<group>"; };
+		771173162C0F89C400C6B3AA /* SepetYemek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemek.swift; sourceTree = "<group>"; };
+		771173182C0F8A6500C6B3AA /* SepetYemeklerJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemeklerJSON.swift; sourceTree = "<group>"; };
+		771173222C0F8CF900C6B3AA /* SepetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetViewModel.swift; sourceTree = "<group>"; };
 		77A14C152C0F3EC8008E9885 /* YemekSiparisUygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YemekSiparisUygulamasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A14C182C0F3EC8008E9885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A14C1A2C0F3EC8008E9885 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +69,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7711731A2C0F8C0A00C6B3AA /* data */ = {
+			isa = PBXGroup;
+			children = (
+				771173212C0F8C6000C6B3AA /* repo */,
+				771173202C0F8C5B00C6B3AA /* entity */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		7711731B2C0F8C1000C6B3AA /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				7711731F2C0F8C4D00C6B3AA /* viewmodels */,
+				7711731E2C0F8C4200C6B3AA /* collectioncell */,
+				7711731D2C0F8C2B00C6B3AA /* tablecell */,
+				7711731C2C0F8C1A00C6B3AA /* views */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		7711731C2C0F8C1A00C6B3AA /* views */ = {
+			isa = PBXGroup;
+			children = (
+				77A14C1C2C0F3EC8008E9885 /* Anasayfa.swift */,
+				771172EF2C0F525000C6B3AA /* UrunDetayVC.swift */,
+				771172F12C0F525E00C6B3AA /* SepetVC.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		7711731D2C0F8C2B00C6B3AA /* tablecell */ = {
+			isa = PBXGroup;
+			children = (
+				771172F52C0F52A200C6B3AA /* SepetHucre.swift */,
+			);
+			path = tablecell;
+			sourceTree = "<group>";
+		};
+		7711731E2C0F8C4200C6B3AA /* collectioncell */ = {
+			isa = PBXGroup;
+			children = (
+				771172F32C0F528C00C6B3AA /* YemekHucre.swift */,
+			);
+			path = collectioncell;
+			sourceTree = "<group>";
+		};
+		7711731F2C0F8C4D00C6B3AA /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				7711730F2C0F5B6A00C6B3AA /* AnasayfaViewModel.swift */,
+				771173222C0F8CF900C6B3AA /* SepetViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		771173202C0F8C5B00C6B3AA /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				771172F72C0F583700C6B3AA /* Yemek.swift */,
+				771173162C0F89C400C6B3AA /* SepetYemek.swift */,
+				771173142C0F852A00C6B3AA /* SepetJSON.swift */,
+				771173182C0F8A6500C6B3AA /* SepetYemeklerJSON.swift */,
+				771172F92C0F58B200C6B3AA /* YemeklerJSON.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		771173212C0F8C6000C6B3AA /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				771172FB2C0F58F400C6B3AA /* YemeklerDaoRepository.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
 		77A14C0C2C0F3EC8008E9885 = {
 			isa = PBXGroup;
 			children = (
@@ -82,15 +165,8 @@
 			children = (
 				77A14C182C0F3EC8008E9885 /* AppDelegate.swift */,
 				77A14C1A2C0F3EC8008E9885 /* SceneDelegate.swift */,
-				77A14C1C2C0F3EC8008E9885 /* Anasayfa.swift */,
-				7711730F2C0F5B6A00C6B3AA /* AnasayfaViewModel.swift */,
-				771172EF2C0F525000C6B3AA /* UrunDetayVC.swift */,
-				771172F12C0F525E00C6B3AA /* SepetVC.swift */,
-				771172F32C0F528C00C6B3AA /* YemekHucre.swift */,
-				771172F52C0F52A200C6B3AA /* SepetHucre.swift */,
-				771172F72C0F583700C6B3AA /* Yemek.swift */,
-				771172F92C0F58B200C6B3AA /* YemeklerJSON.swift */,
-				771172FB2C0F58F400C6B3AA /* YemeklerDaoRepository.swift */,
+				7711731B2C0F8C1000C6B3AA /* ui */,
+				7711731A2C0F8C0A00C6B3AA /* data */,
 				77A14C1E2C0F3EC8008E9885 /* Main.storyboard */,
 				77A14C242C0F3EC9008E9885 /* Assets.xcassets */,
 				77A14C262C0F3EC9008E9885 /* LaunchScreen.storyboard */,
@@ -187,11 +263,15 @@
 				771172F22C0F525E00C6B3AA /* SepetVC.swift in Sources */,
 				771172F62C0F52A200C6B3AA /* SepetHucre.swift in Sources */,
 				771172F82C0F583700C6B3AA /* Yemek.swift in Sources */,
+				771173192C0F8A6500C6B3AA /* SepetYemeklerJSON.swift in Sources */,
 				771172FC2C0F58F400C6B3AA /* YemeklerDaoRepository.swift in Sources */,
+				771173172C0F89C400C6B3AA /* SepetYemek.swift in Sources */,
 				77A14C232C0F3EC8008E9885 /* YemekSiparisUygulamasi.xcdatamodeld in Sources */,
 				771172F02C0F525000C6B3AA /* UrunDetayVC.swift in Sources */,
 				771172FA2C0F58B200C6B3AA /* YemeklerJSON.swift in Sources */,
+				771173232C0F8CF900C6B3AA /* SepetViewModel.swift in Sources */,
 				771172F42C0F528C00C6B3AA /* YemekHucre.swift in Sources */,
+				771173152C0F852A00C6B3AA /* SepetJSON.swift in Sources */,
 				77A14C1B2C0F3EC8008E9885 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

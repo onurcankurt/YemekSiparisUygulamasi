@@ -44,14 +44,14 @@ class Anasayfa: UIViewController {
 
 extension Anasayfa: YemekHucreProtocol {
     func sepeteEkle(indexPath: IndexPath) {
-        print("sepete eklendi")
+        let yemek = yemeklerListesi[indexPath.row]
+        print("\(yemek.yemek_adi!) sepete eklendi.")
+        viewModel.sepeteEkle(yemek_adi: yemek.yemek_adi!, yemek_resim_adi: yemek.yemek_resim_adi!, yemek_fiyat: Int(yemek.yemek_fiyat!)!, yemek_siparis_adet: 1, kullanici_adi: "kurt_1996")
     }
     
     func favorilereEkle(indexPath: IndexPath) {
-        print("dfdf")
+        print("\(yemeklerListesi[indexPath.row].yemek_adi!) favorilere eklendi.")
     }
-    
-    
 }
 
 extension Anasayfa: UICollectionViewDelegate, UICollectionViewDataSource {

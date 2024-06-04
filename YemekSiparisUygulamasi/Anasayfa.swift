@@ -63,10 +63,10 @@ extension Anasayfa: UICollectionViewDelegate, UICollectionViewDataSource {
         let yemek = yemeklerListesi[indexPath.row]
         let hucre = collectionView.dequeueReusableCell(withReuseIdentifier: "yemekHucre", for: indexPath) as! YemekHucre
         
-        //hucre.yemekImageView.image = UIImage(named: yemek.yemek_resim_adi!)
-        
         if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(yemek.yemek_resim_adi!)"){
-            hucre.yemekImageView.kf.setImage(with: url)
+            DispatchQueue.main.async {
+                hucre.yemekImageView.kf.setImage(with: url)
+            }
         }
         
         hucre.yemekAdLabel.text = "\(yemek.yemek_adi!)"
@@ -76,7 +76,7 @@ extension Anasayfa: UICollectionViewDelegate, UICollectionViewDataSource {
         hucre.indexPath = indexPath
         
         hucre.layer.borderColor = UIColor.lightGray.cgColor
-        hucre.layer.borderWidth = 0.3
+        hucre.layer.borderWidth = 0.6
         hucre.layer.cornerRadius = 10
         
         return hucre
@@ -85,6 +85,15 @@ extension Anasayfa: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let yemek = yemeklerListesi[indexPath.row]
         performSegue(withIdentifier: "toUrunDetayVC", sender: yemek)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toUrunDetayVC" {
+            if let senderYemek = sender as? Yemek{
+                let destinationVC = segue.destination as? UrunDetayVC
+                destinationVC?.detayYemek = senderYemek
+            }
+        }
     }
 }
 

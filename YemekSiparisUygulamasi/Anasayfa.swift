@@ -37,7 +37,7 @@ class Anasayfa: UIViewController {
         let screenWidth = UIScreen.main.bounds.width
         let itemWidth = (screenWidth - 30) / 2
         
-        design.itemSize = CGSize(width: itemWidth, height: itemWidth * 1.90)
+        design.itemSize = CGSize(width: itemWidth, height: itemWidth * 1.50)
         yemeklerCollectionView.collectionViewLayout = design
     }
 }
@@ -84,7 +84,7 @@ extension Anasayfa: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let yemek = yemeklerListesi[indexPath.row]
-        performSegue(withIdentifier: "toUrunlerDetayVC", sender: yemek)
+        performSegue(withIdentifier: "toUrunDetayVC", sender: yemek)
     }
 }
 

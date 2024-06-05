@@ -36,13 +36,12 @@ class YemekHucre: UICollectionViewCell {
     @IBAction func favorilereEkleButton(_ sender: Any) {
         let currentImage = favButton.image(for: .normal)
         let newImage = (currentImage == UIImage(systemName: "heart")) ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
-        
+        favButton.setImage(newImage, for: .normal)
         if newImage == UIImage(systemName: "heart"){
             isFavorited = false
         } else {
             isFavorited = true
         }
         yemekHucreProtocol?.favorilereEkle(indexPath: indexPath!, isFavorited: isFavorited)
-        favButton.setImage(newImage, for: .normal)
     }
 }

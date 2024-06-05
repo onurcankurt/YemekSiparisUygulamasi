@@ -21,6 +21,7 @@ class SepetVC: UIViewController {
 
         sepetTableView.delegate = self
         sepetTableView.dataSource = self
+        sepetTableView.separatorStyle = .none
         
         _ = viewModel.sepetYemeklerRXListe.subscribe(onNext: { sepet in
             self.sepetYemekler = sepet
@@ -52,18 +53,18 @@ class SepetVC: UIViewController {
 
 extension SepetVC: SepetHucreProtocol {
     func yemekSil(indexPath: IndexPath) {
-        let yemek = sepetYemekler[indexPath.row]
+        let yemek = sepetYemekler[indexPath.section] // indexPath.rows yerine indexPath.section kullanıldı
         viewModel.sepetYemekSil(sepet_yemek_id: Int(yemek.sepet_yemek_id!)!, kullanici_adi: "kurt_1996")
     }
 }
 
 extension SepetVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        sepetYemekler.count
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sepetYemek = sepetYemekler[indexPath.row]
+        let sepetYemek = sepetYemekler[indexPath.section] // indexPath.rows yerine indexPath.section kullanıldı
         let hucre = tableView.dequeueReusableCell(withIdentifier: "sepetHucre") as! SepetHucre
         
         if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(sepetYemek.yemek_resim_adi!)"){
@@ -84,5 +85,20 @@ extension SepetVC: UITableViewDelegate, UITableViewDataSource {
         hucre.layer.cornerRadius = 10
         
         return hucre
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10 // Boşluk yüksekliği
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView()
+        footerView.backgroundColor = .systemGray6 // Boşluğun rengi
+        return footerView
+    }
+    
+    // Sadece bir section kullandığımız için her hücrede boşluk olması için aşağıdaki iki metodu ekliyoruz
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sepetYemekler.count
     }
 }

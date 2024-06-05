@@ -14,6 +14,7 @@ class SepetVC: UIViewController {
     
     var sepetYemekler = [SepetYemek]()
     var viewModel = SepetViewModel()
+    var toplamFiyat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class SepetVC: UIViewController {
         
         _ = viewModel.sepetYemeklerRXListe.subscribe(onNext: { sepet in
             self.sepetYemekler = sepet
+            self.updateTotalPrice()
             DispatchQueue.main.async {
                 self.sepetTableView.reloadData()
             }
@@ -30,10 +32,21 @@ class SepetVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear")
         viewModel.sepetYemeklerYukle(kullanici_adi: "kurt_1996")
+        sepetTableView.reloadData()
     }
     
     @IBAction func sepetiOnaylaButton(_ sender: Any) {
+    }
+    
+    func updateTotalPrice() {
+        print("updated total price")
+        toplamFiyat = 0
+        for yemek in sepetYemekler {
+            toplamFiyat += Int(yemek.yemek_siparis_adet!)! * Int(yemek.yemek_fiyat!)!
+        }
+        toplamFiyatLabel.text = "₺\(toplamFiyat)"
     }
 }
 

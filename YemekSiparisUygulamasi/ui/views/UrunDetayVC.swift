@@ -59,8 +59,9 @@ class UrunDetayVC: UIViewController {
     
     @IBAction func sepeteEkleButton(_ sender: Any) {
         if let yemekAdet = Int(yemekAdetLabel.text!), let y = detayYemek{
-            viewModel.sepeteEkle(yemek_adi: y.yemek_adi!, yemek_resim_adi: y.yemek_resim_adi!, yemek_fiyat: Int(y.yemek_fiyat!)!, yemek_siparis_adet: yemekAdet, kullanici_adi: "kurt_1996")
-            
+            if yemekAdet > 0 {
+                viewModel.sepeteEkle(yemek_adi: y.yemek_adi!, yemek_resim_adi: y.yemek_resim_adi!, yemek_fiyat: Int(y.yemek_fiyat!)!, yemek_siparis_adet: yemekAdet, kullanici_adi: "kurt_1996")
+            }
         }
     }
 }

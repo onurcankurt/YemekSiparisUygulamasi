@@ -43,14 +43,18 @@ class Anasayfa: UIViewController {
 }
 
 extension Anasayfa: YemekHucreProtocol {
+    func favorilereEkle(indexPath: IndexPath, isFavorited: Bool) {
+        if isFavorited == true{
+            print("\(yemeklerListesi[indexPath.row].yemek_adi!) favorilere eklendi.")
+        } else {
+            print("\(yemeklerListesi[indexPath.row].yemek_adi!) favorilerden çıkarıldı.")
+        }
+    }
+    
     func sepeteEkle(indexPath: IndexPath) {
         let yemek = yemeklerListesi[indexPath.row]
         print("\(yemek.yemek_adi!) sepete eklendi.")
         viewModel.sepeteEkle(yemek_adi: yemek.yemek_adi!, yemek_resim_adi: yemek.yemek_resim_adi!, yemek_fiyat: Int(yemek.yemek_fiyat!)!, yemek_siparis_adet: 1, kullanici_adi: "kurt_1996")
-    }
-    
-    func favorilereEkle(indexPath: IndexPath) {
-        print("\(yemeklerListesi[indexPath.row].yemek_adi!) favorilere eklendi.")
     }
 }
 

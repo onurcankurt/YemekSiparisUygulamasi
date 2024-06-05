@@ -136,6 +136,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ürünler" id="GRQ-qz-fZQ"/>
                     <connections>
+                        <outlet property="searchBar" destination="tdl-Lg-zz1" id="D7O-Xo-fXa"/>
                         <outlet property="yemeklerCollectionView" destination="SJs-7X-Ibo" id="u4u-tV-lfQ"/>
                         <segue destination="BOt-bV-vZY" kind="show" identifier="toUrunDetayVC" id="r44-6r-SA3"/>
                     </connections>

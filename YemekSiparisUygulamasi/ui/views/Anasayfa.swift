@@ -10,6 +10,7 @@ import Kingfisher
 
 class Anasayfa: UIViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var yemeklerCollectionView: UICollectionView!
     var yemeklerListesi = [Yemek]()
     var viewModel = AnasayfaViewModel()
@@ -17,6 +18,7 @@ class Anasayfa: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
         yemeklerCollectionView.delegate = self
         yemeklerCollectionView.dataSource = self
         
@@ -39,6 +41,16 @@ class Anasayfa: UIViewController {
         
         design.itemSize = CGSize(width: itemWidth, height: itemWidth * 1.50)
         yemeklerCollectionView.collectionViewLayout = design
+    }
+}
+
+extension Anasayfa: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText != "" {
+            viewModel.arananYemekleriYukle(aramaKelimesi: searchText)
+        } else {
+            viewModel.yemekleriYukle()
+        }
     }
 }
 

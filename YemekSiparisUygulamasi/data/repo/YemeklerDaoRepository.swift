@@ -30,6 +30,27 @@ class YemeklerDaoRepository {
         }
     }
     
+    func arananYemekleriYukle(aramaKelimesi: String){
+        AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php", method: .get).response { response in
+            if let data = response.data{
+                do{
+                    let cevap = try JSONDecoder().decode(YemeklerJSON.self, from: data)
+                    var liste = [Yemek]()
+                    if let cevapYemekler = cevap.yemekler{
+                        for yemek in cevapYemekler {
+                            if yemek.yemek_adi!.lowercased().contains(aramaKelimesi.lowercased()) {
+                                liste.append(yemek)
+                            }
+                        }
+                    }
+                    self.yemeklerRXListe.onNext(liste)
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
     func sepeteEkle(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: Int, yemek_siparis_adet: Int, kullanici_adi: String){
         let params: Parameters = ["yemek_adi": yemek_adi,
                                   "yemek_resim_adi": yemek_resim_adi,
@@ -61,6 +82,7 @@ class YemeklerDaoRepository {
                     }
                 } catch {
                     print(error.localizedDescription)
+                    self.sepetYemeklerRXListe.onNext([SepetYemek]())
                 }
             }
         }

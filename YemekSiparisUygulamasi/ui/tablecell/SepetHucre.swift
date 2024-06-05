@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SepetHucreProtocol {
+    func yemekSil(indexPath: IndexPath)
+}
+
 class SepetHucre: UITableViewCell {
     
     @IBOutlet weak var yemekImageView: UIImageView!
@@ -14,6 +18,9 @@ class SepetHucre: UITableViewCell {
     @IBOutlet weak var yemekFiyatLabel: UILabel!
     @IBOutlet weak var yemekAdetLabel: UILabel!
     @IBOutlet weak var toplamFiyatLabel: UILabel!
+    
+    var indexPath: IndexPath?
+    var sepetHucreProtocol: SepetHucreProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,5 +34,6 @@ class SepetHucre: UITableViewCell {
     }
     
     @IBAction func yemekSilButton(_ sender: Any) {
+        sepetHucreProtocol?.yemekSil(indexPath: indexPath!)
     }
 }

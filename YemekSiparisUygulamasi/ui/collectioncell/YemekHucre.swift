@@ -28,6 +28,5 @@ class YemekHucre: UICollectionViewCell {
     
     @IBAction func favorilereEkleButton(_ sender: Any) {
         yemekHucreProtocol?.favorilereEkle(indexPath: indexPath!)
-        favButton.imageView!.image = UIImage(named: "heart.fill")
     }
 }

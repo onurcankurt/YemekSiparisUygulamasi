@@ -29,7 +29,18 @@ class SepetVC: UIViewController {
         })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.sepetYemeklerYukle(kullanici_adi: "kurt_1996")
+    }
+    
     @IBAction func sepetiOnaylaButton(_ sender: Any) {
+    }
+}
+
+extension SepetVC: SepetHucreProtocol {
+    func yemekSil(indexPath: IndexPath) {
+        let yemek = sepetYemekler[indexPath.row]
+        viewModel.sepetYemekSil(sepet_yemek_id: Int(yemek.sepet_yemek_id!)!, kullanici_adi: "kurt_1996")
     }
 }
 
@@ -51,6 +62,9 @@ extension SepetVC: UITableViewDelegate, UITableViewDataSource {
         hucre.yemekFiyatLabel.text = "₺ \(sepetYemek.yemek_fiyat!)"
         hucre.yemekAdetLabel.text = sepetYemek.yemek_siparis_adet!
         hucre.toplamFiyatLabel.text = "\(Int(sepetYemek.yemek_fiyat!)! * Int(sepetYemek.yemek_siparis_adet!)!)"
+        
+        hucre.indexPath = indexPath
+        hucre.sepetHucreProtocol = self
         
         hucre.layer.borderColor = UIColor.lightGray.cgColor
         hucre.layer.borderWidth = 0.6

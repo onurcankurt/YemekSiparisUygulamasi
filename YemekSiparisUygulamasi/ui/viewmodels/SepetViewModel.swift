@@ -21,4 +21,8 @@ class SepetViewModel {
     func sepetYemeklerYukle(kullanici_adi: String){
         yrepo.sepetYemeklerYukle(kullanici_adi: kullanici_adi)
     }
+    
+    func sepetYemekSil(sepet_yemek_id: Int, kullanici_adi: String){
+        yrepo.sepetYemekSil(sepet_yemek_id: sepet_yemek_id, kullanici_adi: kullanici_adi)
+    }
 }
